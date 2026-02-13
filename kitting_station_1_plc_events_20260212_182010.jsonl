@@ -1,0 +1,13 @@
+{"sim_time": 0.0, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 0.5, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 1.0, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 1.5, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 2.0, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 2.5, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 3.0, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 3.5, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 4.0, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 4.5, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 5.0, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 5.5, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}
+{"sim_time": 6.0, "category": "PLC", "event_type": "QUEUE_SNAPSHOT", "queued_orders": 0, "wip_count": 0, "completed_count": 0}

@@ -1,0 +1,165 @@
+How the Simulation Works
+
+For each order, PLC executes:
+
+Receive order from DES queue
+
+Check inventory
+
+Picking arm: part bin → staging
+
+Kitting arm: staging → kitting tray
+
+Mounting arm: tray → mounting area + mount operation
+
+Soldering arm: solder operation
+
+Output handling
+
+Reset components
+
+Mark order complete + track cycle time
+
+The simulation tracks:
+
+queued orders
+
+WIP
+
+completed orders
+
+cycle times
+
+per-arm utilization
+
+per-arm failures
+
+Tech Stack
+
+Python 3.x
+
+SimPy
+
+PyQt5
+
+NumPy
+
+Matplotlib
+
+PyOpenGL
+
+Installation
+pip install simpy pyqt5 numpy matplotlib pyopengl pyopengl-accelerate
+
+Run
+Main application (simulation + SCADA launcher)
+python main.py
+
+
+From the main window you can:
+
+Start Simulation
+
+Open SCADA Dashboard
+
+Stop Simulation
+
+Open 3D Visualization
+
+Auto-launch 3D viewer after simulation completes
+
+3D replay viewer directly
+python visual.py
+
+
+Then load a .jsonl log file.
+
+Generated Output Files
+
+When simulation runs/completes, files are created like:
+
+kitting_station_1_plc_events_YYYYMMDD_HHMMSS.jsonl
+(streamed event log, line-by-line JSON)
+
+kitting_station_1_plc_YYYYMMDD_HHMMSS.json
+(final exported report data)
+
+kitting_station_1_plc_cycle_times_YYYYMMDD_HHMMSS.csv
+(cycle times table)
+
+Event Logging Format (JSONL)
+
+Each event includes:
+
+sim_time
+
+category (e.g., PLC, ARM, ORDER, INVENTORY, OUTPUT)
+
+event_type
+
+additional event-specific fields
+
+This log is what powers the replay and KPI analytics in visual.py.
+
+SCADA & Analytics
+SCADA (main dashboard)
+
+Shows:
+
+queued orders / WIP / completed
+
+current station state
+
+average cycle time
+
+per-arm state and utilization
+
+inventory/output states
+
+progress toward order target
+
+3D analytics window
+
+Includes:
+
+replay timeline with play/pause/step/speed controls
+
+camera controls and visibility toggles
+
+event log viewer
+
+charts:
+
+cycle time distribution
+
+throughput over time
+
+failures over time
+
+metrics tab with order/failure/utilization summaries
+
+text report export
+
+Known Limitations
+
+Motion is abstracted in 2D (no full 3D kinematic chain yet)
+
+No torque or collision envelope yet
+
+OpenGL text rendering may depend on local GLUT availability
+
+Uses random failures for stress behavior (stochastic testing)
+
+Suggested Next Steps
+
+Add FK/IK module per arm (joint-level model)
+
+Add workspace reachability checks before movement
+
+Add payload-aware torque and speed constraints
+
+Add collision detection with fixtures and workpieces
+
+Add safety zones and interlock logic to PLC layer
+
+Extend from Station 1 to multi-station orchestration
