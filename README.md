@@ -1,8 +1,6 @@
+<h1 align="center">Kitting Station 1 Digital Twin</h1>
 <p align="center">
-  <h1 align="center">Kitting Station 1 Digital Twin</h1>
-  <p align="center">
-    PLC Controller • SimPy DES • SCADA Dashboard • 3D Replay Viewer
-  </p>
+  PLC Controller • SimPy DES • SCADA Dashboard • 3D Replay Viewer
 </p>
 
 <p align="center">
@@ -16,16 +14,17 @@
 
 ## Overview
 
-This project is a **digital twin for Station 1 (Kitting Cell)**.
+This project is a digital twin for **Station 1 (Kitting Cell)**.
 
 It simulates a PLC-controlled manufacturing workflow with:
+
 - four robotic arms (Picking, Kitting, Mounting, Soldering),
 - sensor/actuator abstraction,
 - SCADA monitoring,
 - structured event logging,
 - replay and KPI analytics from logs.
 
-> Current codebase focus: stable process orchestration and replay-driven analysis.
+> Current focus: stable process orchestration and replay-driven analysis.
 
 ---
 
@@ -44,18 +43,18 @@ It simulates a PLC-controlled manufacturing workflow with:
 ## Screenshots
 
 <p align="center">
-<img width="2559" height="1384" alt="Screenshot 2026-02-13 152607" src="https://github.com/user-attachments/assets/10f755db-cd57-4907-be62-ae697d9f0acf" />
+  <img alt="SCADA Dashboard Main View" src="https://github.com/user-attachments/assets/10f755db-cd57-4907-be62-ae697d9f0acf" width="90%" />
 </p>
 
 <p align="center">
-<img width="2559" height="1387" alt="Screenshot 2026-02-13 152704" src="https://github.com/user-attachments/assets/d12223f1-ca04-419d-8317-be3071f57e99" />
+  <img alt="3D Replay Viewer and Analytics" src="https://github.com/user-attachments/assets/d12223f1-ca04-419d-8317-be3071f57e99" width="90%" />
 </p>
 
 ---
 
 ## Demo Video
 
-- https://drive.google.com/file/d/1wkmIakzZ-d28HSQj0nSNOWzl9N3eJn9f/view?usp=drive_link
+- [Watch Demo Video (Google Drive)](https://drive.google.com/file/d/1wkmIakzZ-d28HSQj0nSNOWzl9N3eJn9f/view?usp=drive_link)
 
 ---
 
