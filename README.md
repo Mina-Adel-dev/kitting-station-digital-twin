@@ -44,18 +44,12 @@ It simulates a PLC-controlled manufacturing workflow with:
 ## Screenshots
 
 <p align="center">
-  <img src="docs/images/scada_dashboard.png" alt="SCADA Dashboard" width="85%">
+<img width="2559" height="1384" alt="Screenshot 2026-02-13 152607" src="https://github.com/user-attachments/assets/10f755db-cd57-4907-be62-ae697d9f0acf" />
 </p>
 
 <p align="center">
-  <img src="docs/images/replay_viewer.png" alt="3D Replay Viewer" width="85%">
+<img width="2559" height="1387" alt="Screenshot 2026-02-13 152704" src="https://github.com/user-attachments/assets/d12223f1-ca04-419d-8317-be3071f57e99" />
 </p>
-
-<p align="center">
-  <img src="docs/images/analytics_tab.png" alt="Analytics Tab" width="85%">
-</p>
-
-> Put your images in `docs/images/` and keep these filenames, or update paths above.
 
 ---
 
