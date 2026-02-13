@@ -1,63 +1,77 @@
-# Kitting Station 1 Digital Twin  
-## PLC Controller + SCADA Dashboard + 3D Replay Viewer
+<p align="center">
+  <h1 align="center">Kitting Station 1 Digital Twin</h1>
+  <p align="center">
+    PLC Controller • SimPy DES • SCADA Dashboard • 3D Replay Viewer
+  </p>
+</p>
 
-A Python-based digital twin for **Station 1 (Kitting Cell)** in a smart factory line.
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-blue">
+  <img alt="SimPy" src="https://img.shields.io/badge/SimPy-DES-orange">
+  <img alt="PyQt5" src="https://img.shields.io/badge/UI-PyQt5-green">
+  <img alt="Status" src="https://img.shields.io/badge/Status-Active-success">
+</p>
 
-This project simulates a full kitting workflow with:
-- a PLC-like controller,
-- four robotic arms,
+---
+
+## Overview
+
+This project is a **digital twin for Station 1 (Kitting Cell)**.
+
+It simulates a PLC-controlled manufacturing workflow with:
+- four robotic arms (Picking, Kitting, Mounting, Soldering),
 - sensor/actuator abstraction,
-- live SCADA monitoring,
-- event logging,
-- 3D replay + analytics from simulation logs.
+- SCADA monitoring,
+- structured event logging,
+- replay and KPI analytics from logs.
+
+> Current codebase focus: stable process orchestration and replay-driven analysis.
 
 ---
 
 ## Features
 
-- **Discrete Event Simulation (DES)** using SimPy
-- **PLC-centered workflow** for order processing
-- **4 robotic arms**:
-  - Picking Arm
-  - Kitting Arm
-  - Mounting Arm
-  - Soldering Arm
-- **Sensor layer** for safe read-only state access
-- **Actuator layer** for controlled PLC commands
-- **Live SCADA dashboard** (PyQt5) with KPIs and arm status
-- **Structured event logging** to `.jsonl`
-- **3D visualization + timeline replay** from log files
-- **Analytics dashboard** with charts and performance metrics
-- **Data export** to JSON and CSV at simulation completion
+- PLC-style station sequence (`IDLE -> ... -> RESETTING`)
+- Discrete event simulation with **SimPy**
+- 4-arm coordinated process flow
+- Live SCADA dashboard
+- JSONL event logging + JSON/CSV export
+- 3D replay viewer with timeline controls
+- KPI/analytics charts from runtime logs
 
 ---
 
-## Current Scope (from this codebase)
+## Screenshots
 
-This version models robotic behavior as **2D point-to-point movement + timed operations** with random failures and repairs.
+<p align="center">
+  <img src="docs/images/scada_dashboard.png" alt="SCADA Dashboard" width="85%">
+</p>
 
-It already includes:
-- pick/place/mount/solder operation flow
-- utilization tracking
-- failure logging + recovery timing
-- KPI tracking and reporting
+<p align="center">
+  <img src="docs/images/replay_viewer.png" alt="3D Replay Viewer" width="85%">
+</p>
 
-It does **not yet** implement:
-- full inverse/forward kinematics,
-- collision geometry,
-- torque/force limits based on payload weight/girth.
+<p align="center">
+  <img src="docs/images/analytics_tab.png" alt="Analytics Tab" width="85%">
+</p>
 
-(These can be added in the next development stage.)
+> Put your images in `docs/images/` and keep these filenames, or update paths above.
+
+---
+
+## Demo Video
+
+- https://drive.google.com/file/d/1wkmIakzZ-d28HSQj0nSNOWzl9N3eJn9f/view?usp=drive_link
 
 ---
 
 ## Project Structure
 
 ```text
-done everything/
-├─ main.py                 # Main app, simulation engine, SCADA UI, logging/export
-├─ station1_plc.py         # PLC controller and station process orchestration
-├─ station1_sensors.py     # Sensor abstraction layer
-├─ station1_actuators.py   # Actuator abstraction layer
-├─ visual.py               # 3D replay viewer + charts + metrics tabs
-└─ station_info_panel.py   # Explanatory panel for station logic in UI
+.
+├── main.py                  # Main runtime, simulation manager, SCADA, export
+├── station1_plc.py          # PLC controller and process orchestration
+├── station1_sensors.py      # Sensor abstraction layer
+├── station1_actuators.py    # Actuator abstraction layer
+├── visual.py                # 3D replay + charts + metrics
+└── station_info_panel.py    # Station info/help panel
